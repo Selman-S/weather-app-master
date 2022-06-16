@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.search-city {
+  padding: 18px 12px;
+  background: #1E213A;
+  background-image: url();
+}
+  
+.buttons {
+  display: flex;justify-content: space-between;
+}
