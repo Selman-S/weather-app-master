@@ -9,12 +9,105 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
-.search-city {
+.search-city-content {
   padding: 18px 12px;
-  background: #1E213A;
-  background-image: url();
 }
+ 
+
+ 
+.search-city {
+  background-color:rgba(30, 33, 58)  ;
+  
+}
+
   
 .buttons {
   display: flex;justify-content: space-between;
+}
+.search-btn{
+  width: 160px;
+  height:40px;
+  background: #6E707A;
+  color:#E7E7EB;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  border:none; 
+  
+}
+
+.location-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #6E707A;
+  color:#E7E7EB;
+  font-size: 22px;
+  border:none;
+
+  border-radius: 50%;
+
+
+}
+.w-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.w-img{
+  width: 150px;
+  margin-top: 135px;
+}
+.degree-s {
+  color: #E7E7EB;
+  font-weight: 500;
+  font-size: 144px;
+  line-height: 169px;
+  margin-top: 40px;
+}
+.celci-s {
+  font-size: 45px;
+  color:#A09FB1
+}
+.w-desc {
+  margin-top: 23px;
+  color:#A09FB1;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  
+}
+.today {
+  margin-top: 48px;
+  color: #88869D;
+  font-weight: 500;
+  font-size: 18px;
+
+}
+.dot {
+  margin-left: 5px;
+  margin-right: 5px;
+
+
+}
+
+.location-s{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  width: 68px;
+  height: 21px;
+  color: #88869D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 100px;
+}
+
+.city-name{
+  margin-left: 16px;
 }

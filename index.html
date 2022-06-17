@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Weather App with API</title>
 </head>
+
 <body>
+
   <div class="container">
     <!---------------- Search City --------------->
     <div class="search-city">
-      <div class="buttons">
-        <button class="search">Search for places</button>
-        <button><i class="fa-solid fa-location-crosshairs"></i></button>
-      </div>
-      <div class="w-status">
-        <img class="w-img" src="./assets/img/LightCloud.png" alt="">
-        <p class="degree">30.6 <span class="celci">°C</span> </p>
-        <p class="w-desc">Few clouds</p>
-        <div class="today"><span>Today</span><span>.</span><span>Thu, 16 Jun</span></div>
-        <div class="location"><i class="fa-solid fa-location-dot"></i><span class="city-name">Raleigh</span>, <span class="country-name">USA</span></div>
+      <div class="search-city-content">
+
+        <div class="buttons">
+          <button class="search-btn">Search for places</button>
+          <button class="location-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
+        </div>
+        <div class="w-status">
+          <img class="w-img" src="./assets/img/LightCloud.png" alt="">
+          <p class="degree-s"><span>30</span><span class="celci-s">°C</span> </p>
+          <p class="w-desc">Few clouds</p>
+          <div class="today"><span>Today</span><span class="dot"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></svg></span><span>Thu, 16 Jun</span></div>
+          <div class="location-s"><i class="fa-solid fa-location-dot"></i><span class="city-name">Raleigh</span>, <span
+              class="country-name">USA</span></div>
+        </div>
+
       </div>
     </div>
-    
+
     <!---------------- celcious fahreneit --------------->
     <div class="istatistic">
       <div class="cel-fa">
@@ -32,87 +42,95 @@
         <div class="fahreneit">°F</div>
       </div>
       <!---------------- Weekly status --------------->
-       <div class="weekly">
-         <div class="day">
-           <p class="day-desc">Tomorow</p>
-           <div class="day-img">
-             <img src="./assets/img/LightCloud.png" alt="">
-           </div>
-           <div class="day-degree">
-             <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
-             <p class="night"><span class="night-celc">23.6</span>°C</p>
-           </div>
-         </div>
-           <div class="day">
-           <p class="day-desc">Tomorow</p>
-           <div class="day-img">
-             <img src="./assets/img/LightCloud.png" alt="">
-           </div>
-           <div class="day-degree">
-             <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
-             <p class="night"><span class="night-celc">23.6</span>°C</p>
-           </div>
-         </div>
-           <div class="day">
-           <p class="day-desc">Tomorow</p>
-           <div class="day-img">
-             <img src="./assets/img/LightCloud.png" alt="">
-           </div>
-           <div class="day-degree">
-             <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
-             <p class="night"><span class="night-celc">23.6</span>°C</p>
-           </div>
-         </div>
-           <div class="day">
-           <p class="day-desc">Tomorow</p>
-           <div class="day-img">
-             <img src="./assets/img/LightCloud.png" alt="">
-           </div>
-           <div class="day-degree">
-             <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
-             <p class="night"><span class="night-celc">23.6</span>°C</p>
-           </div>
-         </div>
-           <div class="day">
-           <p class="day-desc">Tomorow</p>
-           <div class="day-img">
-             <img src="./assets/img/LightCloud.png" alt="">
-           </div>
-           <div class="day-degree">
-             <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
-             <p class="night"><span class="night-celc">23.6</span>°C</p>
-           </div>
-         </div>
-       </div>
-   </div>
-   <!---------------- today higlights --------------->
-     <div class="highlights">
-       <h2>Today's Highligts</h2>
-       <div class="w-status">
-         <div class="w-status-top">
-           <div class="status-top">
-             <p>Wind status</p>
-             <p><span class="quantity">7</span>mph</p>
-             <div class="rotate-wind"><div class="icon"></div><span>wsw</span></div>
-           </div>
-           <div class="status-top">
-             <p>Humidity</p>
-             <p><span class="quantity">84</span>%</p>
-             <div class="progress"><p>0</p><p>50</p><p>100</p> <progress id="file" value="84" max="100"> 32% </progress> <p>%</p></div>
-           </div>
-         </div>
-         <div class="w-status-bottom">
-           <div class="v status-bottom">
-             <p>Visibility</p>
-             <p><span class="quantity">6,4</span>miles</p>
-           </div>
-           <div class="v status-bottom">
-             <p>Air Pressure</p>
-             <p><span class="quantity">998</span>mb</p>
-           </div>
-         </div>
-       </div>  
-     </div>
-   </div>
- </body>
- </html>
+      <div class="weekly">
+        <div class="day">
+          <p class="day-desc">Tomorow</p>
+          <div class="day-img">
+            <img src="./assets/img/LightCloud.png" alt="">
+          </div>
+          <div class="day-degree">
+            <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
+            <p class="night"><span class="night-celc">23.6</span>°C</p>
+          </div>
+        </div>
+        <div class="day">
+          <p class="day-desc">Tomorow</p>
+          <div class="day-img">
+            <img src="./assets/img/LightCloud.png" alt="">
+          </div>
+          <div class="day-degree">
+            <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
+            <p class="night"><span class="night-celc">23.6</span>°C</p>
+          </div>
+        </div>
+        <div class="day">
+          <p class="day-desc">Tomorow</p>
+          <div class="day-img">
+            <img src="./assets/img/LightCloud.png" alt="">
+          </div>
+          <div class="day-degree">
+            <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
+            <p class="night"><span class="night-celc">23.6</span>°C</p>
+          </div>
+        </div>
+        <div class="day">
+          <p class="day-desc">Tomorow</p>
+          <div class="day-img">
+            <img src="./assets/img/LightCloud.png" alt="">
+          </div>
+          <div class="day-degree">
+            <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
+            <p class="night"><span class="night-celc">23.6</span>°C</p>
+          </div>
+        </div>
+        <div class="day">
+          <p class="day-desc">Tomorow</p>
+          <div class="day-img">
+            <img src="./assets/img/LightCloud.png" alt="">
+          </div>
+          <div class="day-degree">
+            <p class="daytime"><span class="daytime-celc">40.3</span>°C</p>
+            <p class="night"><span class="night-celc">23.6</span>°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------- today higlights --------------->
+    <div class="highlights">
+      <h2>Today's Highligts</h2>
+      <div class="w-status">
+        <div class="w-status-top">
+          <div class="status-top">
+            <p>Wind status</p>
+            <p><span class="quantity">7</span>mph</p>
+            <div class="rotate-wind">
+              <div class="icon"></div><span>wsw</span>
+            </div>
+          </div>
+          <div class="status-top">
+            <p>Humidity</p>
+            <p><span class="quantity">84</span>%</p>
+            <div class="progress">
+              <p>0</p>
+              <p>50</p>
+              <p>100</p> <progress id="file" value="84" max="100"> 32% </progress>
+              <p>%</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-status-bottom">
+          <div class="v status-bottom">
+            <p>Visibility</p>
+            <p><span class="quantity">6,4</span>miles</p>
+          </div>
+          <div class="v status-bottom">
+            <p>Air Pressure</p>
+            <p><span class="quantity">998</span>mb</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
