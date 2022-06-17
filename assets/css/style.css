@@ -61,21 +61,21 @@ body{
 }
 .w-img{
   width: 150px;
-  margin-top: 135px;
+  margin-top: 96px;
 }
 .degree-s {
   color: #E7E7EB;
   font-weight: 500;
-  font-size: 144px;
-  line-height: 169px;
-  margin-top: 40px;
+  font-size: 128px;
+  line-height: 128px;
+  margin-top: 24px;
 }
 .celci-s {
   font-size: 45px;
   color:#A09FB1
 }
 .w-desc {
-  margin-top: 23px;
+  margin-top: 16px;
   color:#A09FB1;
   font-weight: 600;
   font-size: 36px;
@@ -83,7 +83,7 @@ body{
   
 }
 .today {
-  margin-top: 48px;
+  margin-top: 16px;
   color: #88869D;
   font-weight: 500;
   font-size: 18px;
