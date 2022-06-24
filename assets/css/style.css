@@ -8,16 +8,20 @@
 body{
   font-family: 'Raleway', sans-serif;
 }
+.container-search {
+  position: relative;
+}
 
 .search-city-content {
   padding: 30px 18px;
+  height:767px;
 }
  
 
  
 .search-city {
   background-color:rgba(30, 33, 58)  ;
-  display: none;
+ 
   
 }
 
@@ -120,10 +124,15 @@ body{
 
 
 .nav-search {
-  height:672px;
+  height:767px;
   background-color:#1E213A;
-  border: 1px solid #f00;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  left:0;
+  top: 0;
+  transition: all .4s linear;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-search-close {
@@ -132,8 +141,96 @@ body{
   top: 1rem;
 }
 
-.nav-search-close i {
+
+.fa-xmark {
   color: #E7E7EB;
   font-size: 1.8rem;
+
+}
+.nav-search-search {
+  margin-top: 5rem;
+  
+}
+.nav-search-input{
+  background-color: transparent;
+  border: 1px solid #E7E7EB;
+  width:252px;
+  padding: .8rem .3rem .8rem 3rem ; 
+  font-size: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+  color:#616475;
+  height:48px;
+  
+}
+
+.fa-magnifying-glass {
+  color:#616475;
+   position:absolute;
+  left:20px;
+  top:50%;
+  transform: translateY(-50%);
+}
+.nav-input-content {
+  position: relative;
+}
+
+.nav-search-button {
+  background: #3C47E9;
+  color:#E7E7EB;
+  font-size: 1rem;
+  margin-left: .8rem;
+  border:none;
+  height:48px;
+  width: 86px;
+}
+.nav-search-result-ul{
+  position: absolute;
+  margin:0 2rem;
+  top:170px;
+  left:0px;
+  list-style-type: none;
+  width:90%;
+  height:550px;
+  overflow: auto;
+  padding:2px;
  
+ 
+
+}
+.nav-search-result-btn {
+  background-color: inherit;
+  color:#E7E7EB;
+  border:none;
+  font-size: .8rem;
+
+}
+
+.nav-search-result-li {
+  padding:1.5rem 1rem;
+  width: 100%;
+  transition: all .2s ease;
+  display: flex;
+  justify-content: space-between;
+ 
+
+}
+.nav-search-result-li svg{
+  color:#88869D;
+  visibility: hidden;
+
+}
+.nav-search-result-li:hover {
+  outline: 1px solid #88869D;
+  cursor: pointer;
+}
+.nav-search-result-li:hover svg {
+  visibility:visible;
+}
+
+@media (max-width:375px){
+
+  .nav-search-input{
+    width:180px;
+  }
 }
