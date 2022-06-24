@@ -17,6 +17,7 @@ body{
  
 .search-city {
   background-color:rgba(30, 33, 58)  ;
+  display: none;
   
 }
 
@@ -112,4 +113,27 @@ body{
 
 .city-name{
   margin-left: 16px;
+}
+
+
+/*********** nav-search *************/
+
+
+.nav-search {
+  height:672px;
+  background-color:#1E213A;
+  border: 1px solid #f00;
+  position: relative;
+}
+
+.nav-search-close {
+  position: absolute;
+  right:2rem;
+  top: 1rem;
+}
+
+.nav-search-close i {
+  color: #E7E7EB;
+  font-size: 1.8rem;
+ 
 }
