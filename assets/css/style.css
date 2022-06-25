@@ -246,39 +246,87 @@ button:active {
 }
 
  /************ celcious fahreneit ***************/
-
+ 
  .statistic-all {
-
- }
- .statistic {
+   
+}
+.statistic {
   padding:2rem;
- }
- .cel-fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cel-fa {
   justify-content: end;
   display: flex;
+  margin-top: 2rem;
+  margin-right: 2rem;
 }
 .cel-fa>div{
   display: flex;
   justify-content:space-evenly;
   gap:1rem;
- }
- .cel-fa-cf {
-   padding:11px;
-    border-radius: 50%;
-    cursor:pointer;
-    font-weight: 700;
-    background-color:#585676 ;
-    color: #E7E7EB;
-
-    width: 40px;
-    height:40px;
- }
+}
+.cel-fa-cf {
+  padding:11px;
+  border-radius: 50%;
+  cursor:pointer;
+  font-weight: 700;
+  background-color:#585676 ;
+  color: #E7E7EB;
+  margin-bottom: 1rem;
+  width: 40px;
+  height:40px;
+}
  .cel-fa-cf:active {
-  transform:scale(.98);
-  user-select: none;
- }
- .cel-fa-active {
-  color:#110E3C;
-  background-color: #E7E7EB;
+   transform:scale(.98);
+   user-select: none;
+  }
+  .cel-fa-active {
+    color:#110E3C;
+    background-color: #E7E7EB;
+    
+  }
+  
+  
+  /************ weekly status ***************/
 
- }
+  .day {
+    margin:18px 13px;
+    color: #E7E7EB;
+    background: #1E213A;
+    width:120px;
+    height:177px;
+
+    text-align: center;
+  }
+
+  .weekly{
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  .day-img img{
+    width:56px;
+    margin-top: 10px;
+  }
+  .day-degree {
+    display: flex;
+  }
+  .day-desc {
+    font-weight: 500;
+    margin-top: 18PX;
+   
+  }
+  .night {
+    color:#A09FB1;
+   
+  }
+  .day-degree {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap:.5rem;
+    font-size: 14px;
+  }
