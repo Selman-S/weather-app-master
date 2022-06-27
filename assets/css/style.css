@@ -291,21 +291,21 @@ button:active {
   
   
   /************ weekly status ***************/
-
+  
   .day {
     margin:18px 13px;
     color: #E7E7EB;
     background: #1E213A;
     width:120px;
     height:177px;
-
+    
     text-align: center;
   }
-
+  
   .weekly{
     display: flex;
     flex-wrap: wrap;
-  
+    
   }
   .day-img img{
     width:56px;
@@ -317,11 +317,11 @@ button:active {
   .day-desc {
     font-weight: 500;
     margin-top: 18PX;
-   
+    
   }
   .night {
     color:#A09FB1;
-   
+    
   }
   .day-degree {
     margin-top: 32px;
@@ -329,4 +329,43 @@ button:active {
     justify-content: center;
     gap:.5rem;
     font-size: 14px;
+  }
+
+
+  /************ Highlights ***************/
+
+  .highlights{
+    text-align-last: left;
+    width: 100%;
+    margin-top: 1rem;
+
+    
+
+  }
+  .w-status-top {
+    width: 100%;
+  }
+  .status-top{
+    width: 100%;
+    border:1px solid red;
+    background-color: #1E213A;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+
+  }
+
+  .status-top>p:first-child {
+    margin-top: 22px;
+  }
+  .status-top>p:nth-child(2) {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .quantity {
+    font-weight: 700;
+    font-size: 64px;
+    
   }
