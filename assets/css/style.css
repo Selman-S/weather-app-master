@@ -215,6 +215,9 @@ button:active {
   height:48px;
   
 }
+.btnn {
+  border:2px solid red;
+}
 
 .fa-magnifying-glass {
   color:#616475;
@@ -247,9 +250,17 @@ button:active {
   height:550px;
   overflow: auto;
   padding:2px;
- 
- 
-
+}
+.valid-city {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  display: none;
+} 
+.enter-city {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 .nav-search-result-btn {
   background-color: inherit;
