@@ -29,8 +29,8 @@ body{
 .search-city {
   background-color:rgba(30, 33, 58)  ;
    position: relative;
-   /* display: none; */
-
+   display: none;    /* 2. con open*/
+   display: block;  /*  1.con open*/
   
 }
 .search-cloud-bg {
@@ -150,13 +150,13 @@ button:active {
 .nav-search {
   height:767px;
   background-color:#1E213A;
-  position: absolute;
+  
   width: 100%;
-  left:100%;
+
   top: 0;
   transition: all .4s linear;
-  display: none;
-  /* display: flex; */
+   display: none; /*1. con open */
+   /* display: flex;   2. con open */
   justify-content: center;
 }
 
@@ -262,10 +262,9 @@ button:active {
 
  /************ celcious fahreneit ***************/
  
- .statistic-all {
-   
-}
-.statistic {
+
+ 
+ .statistic {
   padding:2rem;
   display: flex;
   justify-content: center;
@@ -319,8 +318,10 @@ button:active {
   .weekly{
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: 6fr 6fr;
+   
     width: 100%;
+    grid-template-columns:50% 50%;
+
     
   }
   .day-img img{
@@ -466,32 +467,33 @@ button:active {
 }
   
   /************ Air pressure **************/
-.status-bottom>p:nth-child(1){
-  margin-top: 22px;
-}
-.status-bottom>p:nth-child(2) {
-  font-size: 36px;
-  font-weight: 500;
-  margin-top: 10px;
-  margin-bottom: 38px;
-}
-
-@media (min-width: 768px) {
-  .day {
-    margin:18px 13px;
-    color: #E7E7EB;
-    background: #1E213A;
-    width:120px;
-    height:177px;
-    
-    text-align: center;
+  .status-bottom>p:nth-child(1){
+    margin-top: 22px;
+  }
+  .status-bottom>p:nth-child(2) {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 38px;
   }
   
-  .weekly{
-    display: flex;
-    flex-wrap: wrap;
+  /************ Responsive md **************/
+  @media (min-width: 768px) {
+    .day {
+      margin:18px 13px;
+      color: #E7E7EB;
+      background: #1E213A;
+      width:120px;
+      height:177px;
+      
+      text-align: center;
+    }
     
-  }
+    .weekly{
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
   .day-img img{
     width:56px;
     margin-top: 10px;
@@ -515,5 +517,43 @@ button:active {
     gap:.5rem;
     font-size: 14px;
   }
+  .w-status-top ,.w-status-bottom {
+    display: flex;
+    
+    gap:2rem;
+    
+  }
+  .statistic-all {
+    padding: 2rem;
+  }
+  /************ Responsive **************/
+}
 
+@media (min-width: 992px) {
+  .statistic-all {
+    padding: 3rem;
+  }
+  .container {
+    flex-direction: row;
+    
+  }
+  .search-city {
+
+    height: 100%;
+    width:400px;
+  }
+  .nav-search {
+    height:100%;
+
+ 
+    width: 400px;
+  
+
+  }
+  .statistic-all {
+    padding: 3rem;
+
+     }
+ 
+  
 }
