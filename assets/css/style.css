@@ -211,7 +211,7 @@ button:active {
   font-size: 1rem;
   border-radius: 0;
   box-shadow: none;
-  color:#616475;
+  color:#E7E7EB;
   height:48px;
   
 }
@@ -235,6 +235,7 @@ button:active {
   border:none;
   height:48px;
   width: 86px;
+  cursor: pointer;
 }
 .nav-search-result-ul{
   position: absolute;
