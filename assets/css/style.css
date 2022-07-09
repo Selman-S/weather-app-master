@@ -11,9 +11,21 @@ body{
   color:#E7E7EB;
 
 }
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap:2rem;
+  font-size: 2rem;
+
+
+}
 .container {
   display: flex;
   flex-direction: column;
+  display: none;
 }
 .container-search {
   position: relative;
@@ -22,6 +34,7 @@ body{
 .search-city-content {
   padding: 30px 18px;
   height:767px;
+  position: relative;
 }
  
 
@@ -29,7 +42,7 @@ body{
 .search-city {
   background-color:rgba(30, 33, 58)  ;
    position: relative;
-   display: none;    /* 2. con open*/
+   /*display: none;*/    /* 2. con open*/
    display: block;  /*  1.con open*/
   
 }
@@ -51,7 +64,9 @@ button:active {
 
   
 .buttons {
-  display: flex;justify-content: space-between;
+ 
+  display: flex;
+  justify-content: space-between;
 }
 .search-btn{
   width: 160px;
@@ -64,8 +79,15 @@ button:active {
   border:none; 
   box-shadow: 0px 4px 4px 0px #00000040;
 
+  cursor: pointer;
+
   
 }
+.search-btn:hover { 
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 
 .location-btn{
   display: flex;
@@ -81,6 +103,10 @@ button:active {
   border-radius: 50%;
 
 
+}
+.location-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 .w-status {
   display: flex;
@@ -164,6 +190,7 @@ button:active {
   position: absolute;
   right:2rem;
   top: 1rem;
+  cursor: pointer;
 }
 
 
@@ -314,7 +341,11 @@ button:active {
     
     text-align: center;
   }
-  
+  .day:hover {
+    transform:scale(1.1);
+    transition: all .4s ease;
+    cursor: pointer;
+  }
   .weekly{
     display: grid;
     flex-wrap: wrap;

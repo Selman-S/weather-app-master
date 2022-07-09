@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +18,10 @@
 </head>
 
 <body>
-
+<div class="loading">
+  <img src="./assets/img/oval.svg" width="50" alt="">
+  <p>Loading Weather data...</p>
+</div>
   <div class="container">
     <!---------------- Search City --------------->
     <div class="container-search">
@@ -29,7 +32,7 @@
         <div class="search-city-content">
 
           <div class="buttons">
-            <button class="search-btn">Search for places</button>
+            <button class="search-btn ">Search for places</button>
             <button class="location-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
           </div>
           <div class="w-status">
@@ -112,7 +115,7 @@
       <!---------------- Weekly status --------------->
       <div class="statistic">
         <div class="weekly">
-          <div class="day">
+          <div class="day cursor">
             <p class="day-desc">Tomorow</p>
             <div class="day-img">
               <img src="./assets/img/LightCloud.png" alt="">
@@ -210,6 +213,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
