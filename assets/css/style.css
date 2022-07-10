@@ -215,9 +215,7 @@ button:active {
   height:48px;
   
 }
-.btnn {
-  border:2px solid red;
-}
+
 
 .fa-magnifying-glass {
   color:#616475;
@@ -579,9 +577,10 @@ button:active {
   .container {
     flex-direction: row;
     
+    
   }
   .search-city {
-
+   
     height: 100%;
     width:400px;
   }
@@ -595,8 +594,22 @@ button:active {
   }
   .statistic-all {
     padding: 3rem;
+   
 
      }
  
   
+}
+@media (min-width: 1400px){
+  .statistic-all {
+   width:100%;
+
+     }
+     .weekly{
+      display: flex;
+      justify-content: center;
+     }
+     .day {
+      width: 17%;
+     }
 }

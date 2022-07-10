@@ -17,14 +17,15 @@ let apiKey = "00484987152255e2d06f78d9149a1649";
 // Loading run
 setTimeout(() => {
   loading.style.display = 'none';
-  container.style.display = 'block';
+  container.style.display = 'flex';
 }, 1000);
 
 searchBtn.addEventListener('click',()=> {
 
-  
-  searchCity.style.display = 'none'
-  navSearch.style.display = 'flex'
+
+  searchCity.style.display = 'none';
+  navSearch.style.display = 'flex' ;
+
 })
 navSrcClose.addEventListener('click',()=>{
   searchCity.style.display = 'block'
@@ -53,8 +54,8 @@ if (typeof data=='undefined') {
   navSearchInput.value =''
 
 }else {
-  document.querySelector('.nav-search-result-ul').innerHTML += `<li class="nav-search-result-li btnn" onclick= "setWeatherData(${city_name})">
-  <button class="nav-search-result-btn " ><span class="nav-search-result-spn">${city_name}, ${country_code}</span></button><svg
+  document.querySelector('.nav-search-result-ul').innerHTML += `<li class="nav-search-result-li btnn" onclick= "setWeatherData()">
+  <button class="nav-search-result-btn " ><span class="nav-search-result-spn">${city_name}</span>,<span> ${country_code}</span></button><svg
     stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="icon" height="1em"
     width="1em" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -66,42 +67,133 @@ if (typeof data=='undefined') {
 
   let iconUrl = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
 
-  return city_name
-  
- 
-
-  
-  
+  return   
 } catch (err) {
-
   return err
- 
 }
 }
 
 navSearchButton.addEventListener('click', () =>{
  if (navSearchInput.value) {
-  document.querySelector('.enter-city').style.display='none';
-  document.querySelector('.valid-city').style.display='none';
 
   let city = navSearchInput.value
   getCurrentWeatherData(city)
+}
 
-  
 
- }
- 
- 
-  
- 
-  
-  
-  
-
-  
 })
+ // datayı çek yerleştir
 
- const setWeatherData = (city)=>{
-  console.log(city);
-  
- } // datayı çek yerleştir
+ const setWeatherData = async () => {
+ const citY = document.querySelector('.nav-search-result-spn').textContent
+
+   let lang = "tr";
+   
+   let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${citY}&key=1723148a77444853837f03372fba544a&days=6`;
+   try {
+     const response = await axios(url)
+     const {data,country_code,city_name} = response.data
+   
+     document.querySelector('.nav-search-result-ul').innerHTML =''
+     navSearchInput.value ='';
+     searchCity.style.display = 'block'
+  navSearch.style.display = 'none'
+  // fahrenayt celcious
+    let x =1
+    document.querySelector('.celci-s').innerText ='°C'
+    
+    const {wind_cdir,temp,weather}= data[0]
+    
+    // weather icons
+    let iconUrl;
+ 
+    
+    switch (weather.code) {
+      case 201:
+      case 202:
+      case 200:
+      case 230:
+      case 231:
+      case 232:
+      case 233:
+      
+        iconUrl ='./assets/img/Thunderstorm.png'
+        break;
+      case 300:
+      case 301:
+      case 302:
+      case 511:
+      case 611:
+      case 612:
+        iconUrl ='./assets/img/Sleet.png'
+        break;
+      case 500:
+      case 501:
+
+   
+
+        iconUrl ='./assets/img/LightRain.png'
+        break;
+      case 502:
+      case 522:
+
+        iconUrl ='./assets/img/HeavyRain.png'
+        break;  
+      case 601:
+      case 621:
+
+
+        iconUrl ='./assets/img/Snow.png'
+        break;
+      case 622:
+      case 623:
+        iconUrl ='./assets/img/Hail.png'
+        break;
+      case 521:
+      case 520:
+      case 522:
+        iconUrl ='./assets/img/Shower.png'
+        break; 
+        case 800:
+        iconUrl ='./assets/img/Clear.png'
+        break;
+        case 801:
+        case 802:
+        case 700:
+        case 711:
+        case 721:
+        case 731:
+        case 741:
+        case 751:
+        iconUrl ='./assets/img/LightCloud.png'
+        break;
+      case 803:
+      case 804:
+      case 900:
+        iconUrl ='./assets/img/HeavyCloud.png'
+    }
+     console.log(wind_cdir);
+     
+     // set data first page
+    //celcious
+     document.querySelector('.degree-s span').innerText = String(temp*x).split('.')[0];
+    // weather desc
+    document.querySelector('.w-desc').innerText =weather.description;
+
+    // img icon
+    document.querySelector('.w-img').src = iconUrl;
+
+
+
+   }
+   catch(err){ 
+    document.querySelector('.enter-city').style.display='block';
+      document.querySelector('.enter-city').innerText = `${err.message}`
+    setTimeout(() =>{
+      navSearchInput.value ='';
+      document.querySelector('.enter-city').style.display='none';
+    },5000)
+    
+   
+     
+   }}
