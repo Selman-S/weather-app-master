@@ -8,8 +8,7 @@ const navSrcClose = document.querySelector('.nav-search-close')
 const navSearchInput = document.querySelector('.nav-search-input')
 const navSearchButton = document.querySelector('.nav-search-button')
 
-// let units = 'metric'
-// let apiKey = '00484987152255e2d06f78d9149a1649'
+
 // Loading run
 setTimeout(() => {
   loading.style.display = 'none'
@@ -505,7 +504,7 @@ switch (data[4].weather.code) {
 
 
     // day max min
-    console.log(data);
+   
     
 
     document.querySelector('.day1 .celc-max').innerText = data[0].max_temp
@@ -529,28 +528,33 @@ switch (data[4].weather.code) {
     document.querySelector('.day5 .celc-min').innerText = data[4].min_temp
 
 
+  document.querySelector('.wind-speed').innerHTML = data[0].wind_spd
 
+document.querySelector('.rotate-icon').style.transform= `rotate(${data[0].wind_dir})`
 
+document.querySelector('.wind-cdir').innerHTML = data[0].wind_cdir
 
+document.querySelector('.humidity-deg').innerHTML = data[0].rh
 
+document.querySelector('.progress-bar').value = data[0].rh
 
+document.querySelector('.visibility-deg').innerHTML= String(data[0].vis).split(
+  '.'
+)[0] + '.' + String(data[0].vis).split(
+  '.'
+)[1][1] ;
 
-
-
-
-
+document.querySelector('.air-press').innerHTML = String(data[0].pres).split(
+  '.'
+)[0]
 
 
 
 
 
   } catch (err) {
-    document.querySelector('.enter-city').style.display = 'block'
-    document.querySelector('.enter-city').innerText = `${err.message}`
-    setTimeout(() => {
-      navSearchInput.value = ''
-      document.querySelector('.enter-city').style.display = 'none'
-    }, 5000)
+  console.log(err);
+  
 
 }
 }
