@@ -33,12 +33,14 @@ document.querySelector('.celci').addEventListener('click', e => {
   localStorage.setItem('typeCelc', true)
 
   e.target.classList.add('cel-fa-active')
-  document.querySelector('.fahren').classList.remove('cel-fa-active')
+  document.querySelector('.fahren').classList.remove('cel-fa-active');
+  location.reload()
 })
 document.querySelector('.fahren').addEventListener('click', e => {
   localStorage.setItem('typeCelc', false)
   e.target.classList.add('cel-fa-active')
-  document.querySelector('.celci').classList.remove('cel-fa-active')
+  document.querySelector('.celci').classList.remove('cel-fa-active');
+  location.reload()
 })
 
 const getCurrentWeatherData = async city => {
@@ -86,7 +88,7 @@ navSearchButton.addEventListener('click', () => {
 const setWeatherData1= () => {
    const citY = document.querySelector('.nav-search-result-spn').textContent
    setWeatherData(citY);
-   console.log(citY);
+  
    
 }
 
@@ -111,9 +113,100 @@ const setWeatherData = async (citY) => {
     const { wind_cdir, temp, weather, datetime, valid_date } = data[0]
     // fahrenayt celcious
 
+  const typeCelc= localStorage.getItem('typeCelc');
+  if(typeCelc== null){
+    localStorage.setItem('typeCelc', true)
+    
+  }
 
+  if (typeCelc=='false') {
+
+    document.querySelector('.fahren').classList.add('cel-fa-active');
+    document.querySelector('.celci').classList.remove('cel-fa-active');
+    
+    
+  }else {
+    console.log("celc");
+    
+  }
+  
+   
+  if(localStorage.getItem('typeCelc') == 'true'){
+    tpdeg =true
     document.querySelector('.degree-s span').innerText =
-      String(temp).split('.')[0]
+      String(data[0].max_temp).split('.')[0];
+
+      
+    document.querySelector('.day1 .celc-max').innerText = data[0].max_temp
+
+    document.querySelector('.day1 .celc-min').innerText = data[0].min_temp
+
+    document.querySelector('.day2 .celc-max').innerText = data[1].max_temp
+
+    document.querySelector('.day2 .celc-min').innerText = data[1].min_temp
+
+    document.querySelector('.day3 .celc-max').innerText = data[2].max_temp
+
+    document.querySelector('.day3 .celc-min').innerText = data[2].min_temp
+
+    document.querySelector('.day4 .celc-max').innerText = data[3].max_temp
+
+    document.querySelector('.day4 .celc-min').innerText = data[3].min_temp
+
+    document.querySelector('.day5 .celc-max').innerText = data[4].max_temp
+
+    document.querySelector('.day5 .celc-min').innerText = data[4].min_temp
+
+
+    }else {
+      tpdeg =false
+  
+      document.querySelector('.degree-s span').innerText =
+      String(data[0].max_temp*1.8 +32).split('.')[0]
+      document.querySelector('.celci-s').innerHTML = '°F';
+
+      
+    document.querySelector('.day1 .celc-max').innerText = String(data[1].max_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day1 .celc-min').innerText = String(data[1].min_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day2 .celc-max').innerText = String(data[2].max_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day2 .celc-min').innerText = String(data[2].min_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day3 .celc-max').innerText = String(data[3].max_temp*1.8 +32).slice(0,4)
+  
+    
+
+    document.querySelector('.day3 .celc-min').innerText = String(data[3].min_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day4 .celc-max').innerText = String(data[4].max_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day4 .celc-min').innerText = String(data[4].min_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day5 .celc-max').innerText = String(data[5].max_temp*1.8 +32).slice(0,4)
+
+    document.querySelector('.day5 .celc-min').innerText = String(data[5].min_temp*1.8 +32).slice(0,4)
+    }
+
+
+
+
+  if(tpdeg){
+    document.querySelectorAll('.fahr-f').forEach((e)=> e.innerHTML='°C'
+    )
+  }else{
+    document.querySelectorAll('.fahr-f').forEach((e)=> e.innerHTML='°F'
+    )
+  }
+
+  
+
+  
+  
+
+
+    
   
     // weather icons
     let iconUrl
@@ -487,25 +580,6 @@ const setWeatherData = async (citY) => {
 
     // day max min
 
-    document.querySelector('.day1 .celc-max').innerText = data[0].max_temp
-
-    document.querySelector('.day1 .celc-min').innerText = data[0].min_temp
-
-    document.querySelector('.day2 .celc-max').innerText = data[1].max_temp
-
-    document.querySelector('.day2 .celc-min').innerText = data[1].min_temp
-
-    document.querySelector('.day3 .celc-max').innerText = data[2].max_temp
-
-    document.querySelector('.day3 .celc-min').innerText = data[2].min_temp
-
-    document.querySelector('.day4 .celc-max').innerText = data[3].max_temp
-
-    document.querySelector('.day4 .celc-min').innerText = data[3].min_temp
-
-    document.querySelector('.day5 .celc-max').innerText = data[4].max_temp
-
-    document.querySelector('.day5 .celc-min').innerText = data[4].min_temp
 
     // highlights 
 
