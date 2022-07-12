@@ -1,92 +1,39 @@
-<!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
 
-<div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-</div>
 
-<div align="center">
-  <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv">
-      Challenge
-    </a>
-  </h3>
-</div>
 
-<!-- TABLE OF CONTENTS -->
 
-## Table of Contents
 
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [How to use](#how-to-use)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
-<!-- OVERVIEW -->
 
-## Overview
+<h1>Hi I’m Selman 👋. Welcome to my  Weather Condition App  </h1>
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+<br>
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+<p>The purpose of this project is to make a weather application using the https://api.openweathermap.org api.It is to bring and display the weather conditions of the location desired by the user.</p>
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+<br>
 
-### Built With
+<h2>Live Link of the Project</h2>
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+<br>
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+[Click Me!](https://selman-weather-app.netlify.app/)
 
-## Features
+<br>
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+<h2>Libraries and Technologies I use</h2>
+ 
+ * DOM
+ * Async Await
+ * Axios
+ * Events
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
-## How To Use
+<br>
 
-<!-- Example: -->
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+<h2>How does my project look</h2>
 
-```bash
-# Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
 
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-```
-
-## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
-
-## Contact
-
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+![weath](https://user-images.githubusercontent.com/97898216/178437698-b4671cf3-1fee-4409-a5b3-6832d454fb11.gif)
