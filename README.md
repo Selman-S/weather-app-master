@@ -32,7 +32,7 @@
 
 <br>
 
-![language](https://user-images.githubusercontent.com/97898216/183291442-0cbffafb-8210-4e6e-a1a7-bffc440b585a.gif)
+
 
 <h2>How does my project look</h2>
 
